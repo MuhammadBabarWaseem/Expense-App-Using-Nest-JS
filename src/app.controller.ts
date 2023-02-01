@@ -15,16 +15,16 @@ export class AppController {
 
   @Post()
   createReport() {
-    return 'Created Successfully';
+    return 'Report Created Successfully!';
   }
 
   @Put(':id')
   updateReport() {
-    return 'Updated Successfully';
+    return 'Report Updated Successfully!';
   }
 
   @Delete(':id')
   deleteReport() {
-    return 'Deleted Successfully';
+    return 'Report Deleted Successfully!';
   }
 }
