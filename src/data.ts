@@ -39,6 +39,6 @@ interface Data {
     amount: number;
     created_at: Date;
     updated_at: Date;
-    type: 'income' | 'expense';
+    type: ReportType.EXPENSE | ReportType.INCOME;
   }[];
 }
