@@ -8,7 +8,7 @@ export const data: Data = {
     {
       id: 'uuid1',
       source: 'Salary',
-      amount: 25000,
+      amount: 7500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.INCOME,
@@ -16,7 +16,7 @@ export const data: Data = {
     {
       id: 'uuid2',
       source: 'Tution',
-      amount: 15000,
+      amount: 2500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.INCOME,
@@ -24,7 +24,7 @@ export const data: Data = {
     {
       id: 'uuid3',
       source: 'Food',
-      amount: 800,
+      amount: 500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.EXPENSE,
