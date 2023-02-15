@@ -4,7 +4,14 @@ import { Request, Response, NextFunction } from 'express';
 @Injectable()
 export class summaryMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
-    console.log('this is class based middleware implemented for summary');
+    const protocol = req.protocol;
+    const host = req.get('host');
+    const url = req.originalUrl;
+    const method = req.method;
+    const date = new Date();
+    console.log(
+      protocol + '://' + host + ':' + url + ' ' + method + ' ' + date,
+    );
     next();
   }
 }
