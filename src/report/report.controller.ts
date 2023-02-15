@@ -19,7 +19,6 @@ import {
   ReportResponseDto,
 } from 'src/dtos/report.dto';
 
-
 @Controller('report/:type')
 export class ReportController {
   // constructor to access app.service.ts file

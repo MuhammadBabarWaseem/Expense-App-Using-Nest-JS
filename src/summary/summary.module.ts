@@ -1,11 +1,16 @@
 import { ReportModule } from './../report/report.module';
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { SummaryController } from './summary.controller';
 import { SummaryService } from './summary.service';
+import { summaryMiddleware } from './summary.middleware';
 
 @Module({
   imports: [ReportModule],
   controllers: [SummaryController],
   providers: [SummaryService],
 })
-export class SummaryModule {}
+export class SummaryModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(summaryMiddleware).forRoutes('summary');
+  }
+}
