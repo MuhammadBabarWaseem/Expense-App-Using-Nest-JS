@@ -19,7 +19,6 @@ import {
   ReportResponseDto,
 } from 'src/dtos/report.dto';
 
-// From 1 hour 59 min Minutes Video https://www.youtube.com/watch?v=BiN-xzNkH_0
 
 @Controller('report/:type')
 export class ReportController {
